@@ -24,7 +24,7 @@ public class PlayerOneInput : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 movement = Vector3.zero;
+        Vector3 movement = Vector3.zero;
 		if (Input.GetKey (KeyCode.UpArrow))
         {
 			movement = new Vector3 (0, 0, playerSpeed * Time.deltaTime);
