@@ -25,15 +25,15 @@ public class PlayerTwoInput : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		Vector3 movement = Vector3.zero;
-		if (Input.GetKey (KeyCode.W))
+        Vector3 movement = Vector3.zero;
+        if (Input.GetKey (KeyCode.W))
         {
-			movement += new Vector3 (0, 0, playerSpeed * Time.deltaTime);
-		}
+            movement += new Vector3 (0, 0, playerSpeed * Time.deltaTime);
+        }
         else if (Input.GetKey (KeyCode.S))
         {
-			movement += new Vector3 (0, 0, playerSpeed * -1 * Time.deltaTime);
-		}
-		characterCtrl.Move (movement);
-	}
+            movement += new Vector3 (0, 0, playerSpeed * -1 * Time.deltaTime);
+        }
+        characterCtrl.Move(movement);
+    }
 }
