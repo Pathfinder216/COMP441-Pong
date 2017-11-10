@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallController : MonoBehaviour {
+public class BallController : MonoBehaviour
+{
     private float speed = 5f;
     private Vector3 movement;
     private AudioSource audioSource;
@@ -19,15 +20,18 @@ public class BallController : MonoBehaviour {
         transform.position += movement * Time.deltaTime;
     }
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter(Collider other)
+    {
         string tag = other.tag;
         audioSource.clip = hit;
         audioSource.Play();
-
-        if (tag == "wall") {
+        
+        if (tag == "wall")
+        {
             movement.z *= -1;
         }
-        else if (tag == "paddle") {
+        else if (tag == "paddle")
+        {
             movement.x *= -1;
         }
     }
